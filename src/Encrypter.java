@@ -26,20 +26,48 @@ public class Encrypter {
         char[][] keyMatrix = new char[5][5];
         char[] cipher = new char[plainText.length];
         fillFullMatrix();
-
+        int startX = 0 , startY = 0;
+        boolean first = true;
         char[] currentKey = generateValidKey(key);
+
+        System.out.println(currentKey);
+        for (int i = 0; i < currentKey.length ; i++) {
+            markAlpha(currentKey[i]);
+        }
+        System.out.println(alpha);
         for (int i = 0, k = 0 ; i < 5 ; i++) {
             for (int j = 0; j < 5 ; j++) {
                 if(k >= currentKey.length){
-                    keyMatrix[i][j] = '.';
+                    if(first){
+                        first = false;
+                        startX = i ;
+                        startY = j;
+                    }
                 }
                 else {
                     keyMatrix[i][j] = currentKey[k];
                     k++;
                 }
             }
-        }
 
+        }
+        ArrayList<Character> currentAlpha = new ArrayList<Character>();
+        for (int i = 0; i < alpha.length ; i++) {
+            if(alpha[i] == '0'){
+
+            }
+            else{
+                currentAlpha.add(alpha[i]);
+            }
+        }
+        for (int i = startX, k = 0; i < 5 ; i++) {
+            for (int j = startY; j < 5  ; j++,k++) {
+                keyMatrix[i][j] += currentAlpha.get(k);
+            }
+        }
+        for (int i = 0; i < plainText.length ; i++) {
+        //    findLOcation();
+        }
         return key;
     }
 
@@ -91,11 +119,6 @@ public class Encrypter {
     public static void main(String[] args){
         String x = "playfairexample";
         char[] y = x.toCharArray();
-        fillFullMatrix();
-        for (int i = 0; i < y.length ; i++) {
-            markAlpha(y[i]);
-        }
-        System.out.println(alpha);
-        System.out.println(EncryptByPlayFair(y,y));
+        EncryptByPlayFair(y,y);
     }
 }
