@@ -84,6 +84,48 @@ public class Encrypter {
         }
         return cipher;
     }
+    public static char[] EncryptByVigenere(char[] key, char[] plainText){
+        char[] validKey = new char[plainText.length];
+        char[] cipher = new char[plainText.length];
+        for (int i = 0; i < key.length ; i++) {
+            validKey[i] = key[i];
+        }
+        for (int i = key.length, j = 0, k = 0; i < validKey.length ; i++, j++) {
+            if(key.length == j){
+                j = 0;
+            }
+            validKey[i] = key[j];
+        }
+        System.out.println(validKey);
+        for (int i = 0; i < plainText.length ; i++) {
+            if(plainText[i] + validKey[i] - 'a' > 'z'){
+                cipher[i] = (char)('a' + (char)(plainText[i] + validKey[i] - 'a' - 'z'-1));
+            }
+            else{
+                cipher[i] = (char)(plainText[i] + (validKey[i] - 'a'));
+            }
+        }
+        return cipher;
+    }
+    public static char[] EncryptByAutoKey(char[] key, char[] plainText){
+        char[] validKey = new char[plainText.length];
+        char[] cipher = new char[plainText.length];
+        for (int i = 0; i < key.length ; i++) {
+            validKey[i] = key[i];
+        }
+        for (int i = key.length,j = 0; i < validKey.length ; i++,j++) {
+            validKey[i] = plainText[j];
+        }
+        for (int i = 0; i < plainText.length ; i++) {
+            if(plainText[i] + validKey[i] - 'a' > 'z'){
+                cipher[i] = (char)('a' + (char)(plainText[i] + validKey[i] - 'a' - 'z'-1));
+            }
+            else{
+                cipher[i] = (char)(plainText[i] + (validKey[i] - 'a'));
+            }
+        }
+        return cipher;
+    }
 
     private static char[] createValidPlainText(char[] plainText) {
         ArrayList<Character> plain = new ArrayList<Character>();
@@ -105,7 +147,6 @@ public class Encrypter {
         }
         return validPlainText;
     }
-
     private static Pair findLocation(char[][] keyMatrix, char c) {
         Pair current = new Pair(0,0);
         for (int i = 0; i < 5; i++) {
@@ -119,7 +160,6 @@ public class Encrypter {
         }
         return current;
     }
-
     private static void fillFullMatrix() {
         alpha = new char[25];
         int j = 0;
@@ -130,7 +170,6 @@ public class Encrypter {
             alpha[i] = (char) ('a' + j + i);
         }
     }
-
     private static void markAlpha(char c) {
         for (int i = 0; i < 25 ; i++) {
             if(alpha[i] == c){
@@ -139,7 +178,6 @@ public class Encrypter {
             }
         }
     }
-
     private static char[] generateValidKey(char[] key) {
         ArrayList<Character> keys = new ArrayList<Character>();
         for (int i = 0; i <key.length ; i++) {
@@ -166,8 +204,10 @@ public class Encrypter {
     }
 
     public static void main(String[] args){
-        String x = "playfairexample";
+        String x = "deceptive";
         char[] y = x.toCharArray();
+        char[] z = "wearediscoveredsaveyourself".toCharArray();
+        System.out.println(z);
         System.out.println();
     }
 }
