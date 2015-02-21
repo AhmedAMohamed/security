@@ -213,7 +213,7 @@ public class Encrypter {
     }
 
     public static void main(String[] args){
-        String x = "cuzwr";
+        String x = "lrlulu";
         char[] y = x.toCharArray();
         char[] z = "royalnewzdvbcfghikmpqstux".toCharArray();
         System.out.println(EncryptByPlayFair(z,y));
