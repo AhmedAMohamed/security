@@ -29,20 +29,15 @@
       <file leaf-file-name="Encrypter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Encrypter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.05221932" vertical-offset="82" max-vertical-offset="544">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.6449086" vertical-offset="3136" max-vertical-offset="3587">
+              <caret line="215" column="25" selection-start-line="215" selection-start-column="25" selection-end-line="215" selection-end-column="25" />
               <folding>
                 <element signature="docComment;class#Encrypter#0" expanded="false" />
                 <element signature="method#EncryptByCaesar#0;class#Encrypter#0" expanded="false" />
                 <element signature="method#EncryptByAffine#0;class#Encrypter#0" expanded="false" />
-                <element signature="method#EncryptByPlayFair#0;class#Encrypter#0" expanded="false" />
-                <element signature="method#EncryptByVigenere#0;class#Encrypter#0" expanded="false" />
-                <element signature="method#EncryptByAutoKey#0;class#Encrypter#0" expanded="false" />
-                <element signature="method#createValidPlainText#0;class#Encrypter#0" expanded="false" />
-                <element signature="method#findLocation#0;class#Encrypter#0" expanded="false" />
-                <element signature="method#fillFullMatrix#0;class#Encrypter#0" expanded="false" />
-                <element signature="method#markAlpha#0;class#Encrypter#0" expanded="false" />
-                <element signature="method#generateValidKey#0;class#Encrypter#0" expanded="false" />
+                <element signature="e#1666#1677#0" expanded="true" />
+                <element signature="e#5210#5221#0" expanded="true" />
+                <element signature="e#6751#6762#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,7 +128,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -169,6 +163,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -479,15 +474,16 @@
       <workItem from="1424298134863" duration="3000" />
       <workItem from="1424298169928" duration="15679000" />
       <workItem from="1424335660539" duration="14784000" />
-      <workItem from="1424463820151" duration="5152000" />
+      <workItem from="1424463820151" duration="5732000" />
+      <workItem from="1424504411153" duration="4947000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35618000" />
+    <option name="totallyTimeSpent" value="41145000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -501,7 +497,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32843137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -537,7 +533,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="25" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -548,20 +544,47 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Encrypter.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="docComment;class#Encrypter#0" expanded="false" />
+            <element signature="method#EncryptByCaesar#0;class#Encrypter#0" expanded="false" />
+            <element signature="method#EncryptByAffine#0;class#Encrypter#0" expanded="false" />
+            <element signature="e#1666#1677#0" expanded="true" />
+            <element signature="e#5210#5221#0" expanded="true" />
+            <element signature="e#6751#6762#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pair.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="595">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding>
+            <element signature="e#210#211#0" expanded="true" />
+            <element signature="e#236#237#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#293#294#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#342#343#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Encrypter.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="docComment;class#Encrypter#0" expanded="false" />
             <element signature="method#EncryptByCaesar#0;class#Encrypter#0" expanded="false" />
             <element signature="method#EncryptByAffine#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#EncryptByPlayFair#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#EncryptByVigenere#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#EncryptByAutoKey#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#createValidPlainText#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#findLocation#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#fillFullMatrix#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#markAlpha#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#generateValidKey#0;class#Encrypter#0" expanded="false" />
+            <element signature="e#1666#1677#0" expanded="true" />
+            <element signature="e#5210#5221#0" expanded="true" />
+            <element signature="e#6751#6762#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -591,14 +614,9 @@
             <element signature="docComment;class#Encrypter#0" expanded="false" />
             <element signature="method#EncryptByCaesar#0;class#Encrypter#0" expanded="false" />
             <element signature="method#EncryptByAffine#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#EncryptByPlayFair#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#EncryptByVigenere#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#EncryptByAutoKey#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#createValidPlainText#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#findLocation#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#fillFullMatrix#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#markAlpha#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#generateValidKey#0;class#Encrypter#0" expanded="false" />
+            <element signature="e#1666#1677#0" expanded="true" />
+            <element signature="e#5210#5221#0" expanded="true" />
+            <element signature="e#6751#6762#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -697,20 +715,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Encrypter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05221932" vertical-offset="82" max-vertical-offset="544">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.6449086" vertical-offset="3136" max-vertical-offset="3587">
+          <caret line="215" column="25" selection-start-line="215" selection-start-column="25" selection-end-line="215" selection-end-column="25" />
           <folding>
             <element signature="docComment;class#Encrypter#0" expanded="false" />
             <element signature="method#EncryptByCaesar#0;class#Encrypter#0" expanded="false" />
             <element signature="method#EncryptByAffine#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#EncryptByPlayFair#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#EncryptByVigenere#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#EncryptByAutoKey#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#createValidPlainText#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#findLocation#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#fillFullMatrix#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#markAlpha#0;class#Encrypter#0" expanded="false" />
-            <element signature="method#generateValidKey#0;class#Encrypter#0" expanded="false" />
+            <element signature="e#1666#1677#0" expanded="true" />
+            <element signature="e#5210#5221#0" expanded="true" />
+            <element signature="e#6751#6762#0" expanded="true" />
           </folding>
         </state>
       </provider>

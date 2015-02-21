@@ -30,11 +30,9 @@ public class Encrypter {
         boolean first = true;
         char[] currentKey = generateValidKey(key);
 
-        //System.out.println(currentKey);
         for (int i = 0; i < currentKey.length ; i++) {
             markAlpha(currentKey[i]);
         }
-        //System.out.println(alpha);
         for (int i = 0, k = 0 ; i < 5 ; i++) {
             for (int j = 0; j < 5 ; j++) {
                 if(k >= currentKey.length){
@@ -59,10 +57,21 @@ public class Encrypter {
                 currentAlpha.add(alpha[i]);
             }
         }
-        for (int i = startX, k = 0; i < 5 ; i++) {
-            for (int j = startY; j < 5  ; j++,k++) {
-                keyMatrix[i][j] += currentAlpha.get(k);
+        if(startX == 0 && startY == 0){
+
+        }
+        else{
+            for (int i = startX, k = 0; i < 5 ; i++) {
+                for (int j = startY; j < 5  ; j++,k++) {
+                    keyMatrix[i][j] += currentAlpha.get(k);
+                }
             }
+        }
+        for (int i = 0; i < 5 ; i++) {
+            for (int j = 0; j < 5 ; j++) {
+                System.out.print(keyMatrix[i][j] + " ");
+            }
+            System.out.println();
         }
         plainText = createValidPlainText(plainText);
         cipher = new char[plainText.length];
@@ -133,7 +142,7 @@ public class Encrypter {
         for (int i = 0; i < plainText.length ; i++) {
             plain.add(plainText[i]);
         }
-        for (int i = 0; i < plainText.length ; i+=2) {
+        for (int i = 0; i < plainText.length-1 ; i+=2) {
             if(plain.get(i) == plain.get(i+1)){
                plain.add(i+1,'x');
             }
@@ -204,10 +213,9 @@ public class Encrypter {
     }
 
     public static void main(String[] args){
-        String x = "deceptive";
+        String x = "cuzwr";
         char[] y = x.toCharArray();
-        char[] z = "wearediscoveredsaveyourself".toCharArray();
-        System.out.println(z);
-        System.out.println();
+        char[] z = "royalnewzdvbcfghikmpqstux".toCharArray();
+        System.out.println(EncryptByPlayFair(z,y));
     }
 }
