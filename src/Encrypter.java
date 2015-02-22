@@ -135,6 +135,27 @@ public class Encrypter {
         }
         return cipher;
     }
+    public static char[][] EncryptByRailFence(float key, char[] plainText){
+        float lines = plainText.length / key;
+        int line_length = (int) Math.ceil(lines);
+        System.out.println(line_length + " " + (int)key);
+        char[][] cipher = new char[(int)key][line_length];
+        for (int i = 0, w = 0; i < line_length; i++) {
+            for (int j = 0; j < key && w < plainText.length; j++,w++) {
+                cipher[j][i] = plainText[w];
+            }
+        }
+        return cipher;
+    }
+    public static char[] EncryptByRowTransposition(int[] key, char[][] plainText){
+        char[] cipher = new char[plainText.length*plainText[0].length];
+        for (int i = 0, w = 0; i < plainText[0].length ; i++) {
+            for (int j = 0; j < plainText.length ; j++, w++) {
+                cipher[w] = plainText[j][key[i]];
+            }
+        }
+        return cipher;
+    }
 
     private static char[] createValidPlainText(char[] plainText) {
         ArrayList<Character> plain = new ArrayList<Character>();
@@ -213,9 +234,15 @@ public class Encrypter {
     }
 
     public static void main(String[] args){
-        String x = "lrlulu";
+        String x = "ahmedalaamohamedelsayed";
         char[] y = x.toCharArray();
         char[] z = "royalnewzdvbcfghikmpqstux".toCharArray();
-        System.out.println(EncryptByPlayFair(z,y));
+        char[][] text =  {
+            {'a','b','c'}, {'d','f','g'}, {'h','i','j'}
+                        };
+        int[] key = {0,1,2};
+        char[] w = EncryptByRowTransposition(key,text);
+        System.out.println(w);
+
     }
 }
