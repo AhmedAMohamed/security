@@ -116,7 +116,7 @@ public class Encrypter {
         }
         return cipher;
     }
-    public static char[] EncryptByAutoKey(char[] key, char[] plainText){
+    public static String EncryptByAutoKey(char[] key, char[] plainText){
         char[] validKey = new char[plainText.length];
         char[] cipher = new char[plainText.length];
         for (int i = 0; i < key.length ; i++) {
@@ -133,7 +133,11 @@ public class Encrypter {
                 cipher[i] = (char)(plainText[i] + (validKey[i] - 'a'));
             }
         }
-        return cipher;
+        StringBuilder cii = new StringBuilder();
+        for (int i = 0; i < cipher.length ; i++) {
+            cii.append(cipher[i]);
+        }
+        return cii.toString();
     }
     public static char[][] EncryptByRailFence(float key, char[] plainText){
         float lines = plainText.length / key;
@@ -147,14 +151,18 @@ public class Encrypter {
         }
         return cipher;
     }
-    public static char[] EncryptByRowTransposition(int[] key, char[][] plainText){
+    public static String EncryptByRowTransposition(int[] key, char[][] plainText){
         char[] cipher = new char[plainText.length*plainText[0].length];
         for (int i = 0, w = 0; i < plainText[0].length ; i++) {
             for (int j = 0; j < plainText.length ; j++, w++) {
                 cipher[w] = plainText[j][key[i]];
             }
         }
-        return cipher;
+        StringBuilder cii = new StringBuilder();
+        for (int i = 0; i <cipher.length; i++) {
+            cii.append(cipher[i]);
+        }
+        return cii.toString();
     }
 
     private static char[] createValidPlainText(char[] plainText) {
@@ -241,7 +249,7 @@ public class Encrypter {
             {'a','b','c'}, {'d','f','g'}, {'h','i','j'}
                         };
         int[] key = {0,1,2};
-        char[] w = EncryptByRowTransposition(key,text);
+        String w = EncryptByRowTransposition(key,text);
         System.out.println(w);
 
     }
