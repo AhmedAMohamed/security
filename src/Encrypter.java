@@ -142,7 +142,6 @@ public class Encrypter {
     public static char[][] EncryptByRailFence(float key, char[] plainText){
         float lines = plainText.length / key;
         int line_length = (int) Math.ceil(lines);
-        System.out.println(line_length + " " + (int)key);
         char[][] cipher = new char[(int)key][line_length];
         for (int i = 0, w = 0; i < line_length; i++) {
             for (int j = 0; j < key && w < plainText.length; j++,w++) {
@@ -151,11 +150,18 @@ public class Encrypter {
         }
         return cipher;
     }
-    public static String EncryptByRowTransposition(int[] key, char[][] plainText){
-        char[] cipher = new char[plainText.length*plainText[0].length];
-        for (int i = 0, w = 0; i < plainText[0].length ; i++) {
-            for (int j = 0; j < plainText.length ; j++, w++) {
-                cipher[w] = plainText[j][key[i]];
+    public static String EncryptByRowTransposition(int[] key, String plainText){
+        char[][] text = new char[(int)Math.ceil(plainText.length()/key.length)][key.length];
+        for (int i = 0,k = 0; i < Math.ceil(plainText.length()/key.length) ; i++) {
+            for (int j = 0; j <key.length; j++) {
+                text[i][j] = plainText.charAt(k++);
+            }
+        }
+
+        char[] cipher = new char[text.length*text[0].length];
+        for (int i = 0, w = 0; i < text[0].length ; i++) {
+            for (int j = 0; j < text.length ; j++, w++) {
+                cipher[w] = text[j][key[i]];
             }
         }
         StringBuilder cii = new StringBuilder();
@@ -242,15 +248,6 @@ public class Encrypter {
     }
 
     public static void main(String[] args){
-        String x = "ahmedalaamohamedelsayed";
-        char[] y = x.toCharArray();
-        char[] z = "royalnewzdvbcfghikmpqstux".toCharArray();
-        char[][] text =  {
-            {'a','b','c'}, {'d','f','g'}, {'h','i','j'}
-                        };
-        int[] key = {0,1,2};
-        String w = EncryptByRowTransposition(key,text);
-        System.out.println(w);
 
     }
 }
